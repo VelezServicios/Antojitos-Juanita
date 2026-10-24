@@ -41,13 +41,17 @@
             flex-direction: column;
             align-items: center;
             gap: 5px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #0077b6;
         }
         nav a i {
             font-size: 18px;
             color: #000000;
         }
         .logo-img {
-            max-width: 120px;
+            max-width: 100px;
             height: auto;
             border-radius: 50%;
         }
@@ -64,11 +68,17 @@
             color: #000000;
         }
         .maps-title {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             margin-top: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: #000000;
+            text-transform: uppercase;
+        }
+        .maps-subtitle {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 20px;
         }
         .maps-img {
             max-width: 100%;
@@ -79,14 +89,32 @@
         .maps-img:hover {
             transform: scale(1.02);
         }
+
+        /* Ajustes para versión móvil */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            nav {
+                justify-content: center;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
+    <div>
+        <a href="#">
+            <img src="AJ_LOGO.png" alt="Logo Antojitos Juanita" class="logo-img">
+        </a>
+    </div>
     <nav>
         <a href="PAGOTRANSFERENCIA.html">
-            <i class="fas fa-credit-card"></i> Pago
+            <i class="fas fa-credit-card"></i> Pago con Transferencia
         </a>
         <a href="https://wa.me/5534338228" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i> WhatsApp
@@ -95,17 +123,15 @@
             <i class="fab fa-facebook"></i> Facebook
         </a>
     </nav>
-    <div>
-        <img src="AJ_LOGO.png" alt="Logo Antojitos Juanita" class="logo-img">
-    </div>
 </header>
 
 <main>
     <h1>Antojitos Juanita</h1>
 
     <div class="maps-title">Califícanos en Google Maps</div>
+    <div class="maps-subtitle">Haz clic en la imagen</div>
     <a href="https://search.google.com/local/writereview?placeid=ChIJrSYqFLr10YURWmrVFpbnzSk" target="_blank" rel="noopener noreferrer">
-        <img src="AJ_GOOGLE" alt="Califícanos en Google Maps" class="maps-img">
+        <img src="aj_google.jpg" alt="Califícanos en Google Maps" class="maps-img">
     </a>
 </main>
 
