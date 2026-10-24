@@ -63,30 +63,33 @@
             box-sizing: border-box;
         }
         h1 {
-            font-size: 56px;
+            font-size: 40px;
             font-weight: bold;
             margin-bottom: 30px;
             color: #000000;
-            white-space: nowrap;
-        }
-        .maps-title {
-            font-size: 28px;
-            font-weight: bold;
-            margin-top: 40px;
-            margin-bottom: 10px;
-            color: #000000;
-            text-transform: uppercase;
+            text-align: center;
+            word-wrap: break-word;
         }
         .maps-subtitle {
             font-size: 16px;
             color: #666666;
             margin-bottom: 20px;
+            display: block; 
+            margin-top: 10px;
+            text-align: center;
+        }
+        .img-container {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
         }
         .maps-img {
-            max-width: 100%;
+            width: 100%;
+            height: auto;
             border-radius: 12px;
             transition: transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: block;
         }
         .maps-img:hover {
             transform: scale(1.02);
@@ -100,11 +103,14 @@
                 padding: 20px;
             }
             .logo-img {
-                max-width: 150px;
+                max-width: 120px;
             }
             nav {
                 justify-content: center;
                 width: 100%;
+            }
+            h1 {
+                font-size: 32px;
             }
         }
     </style>
@@ -133,11 +139,12 @@
 <main>
     <h1>Antojitos Juanita</h1>
 
-    <div class="maps-title">Califícanos en Google Maps</div>
+    <div class="img-container">
+        <a href="https://search.google.com/local/writereview?placeid=ChIJrSYqFLr10YURWmrVFpbnzSk" target="_blank" rel="noopener noreferrer">
+            <img src="AJ_GOOGLE.jpg" alt="Califícanos en Google Maps" class="maps-img">
+        </a>
+    </div>
     <div class="maps-subtitle">Haz clic en la imagen</div>
-    <a href="https://search.google.com/local/writereview?placeid=ChIJrSYqFLr10YURWmrVFpbnzSk" target="_blank" rel="noopener noreferrer">
-        <img src="AJ_GOOGLE.jpg" alt="Califícanos en Google Maps" class="maps-img">
-    </a>
 </main>
 
 </body>
