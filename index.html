@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antojitos Juanita - Vélez SmartLink</title>
+    <title>Antojitos Juanita</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #ffffff;
-            color: #333;
+            color: #333333;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -19,78 +19,64 @@
         }
         header {
             width: 100%;
-            background-color: #f4f4f4;
-            padding: 15px 0;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
+            background-color: #f0f0f0;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        nav a i {
+            font-size: 18px;
+            color: #000000;
         }
         .logo-img {
-            max-width: 150px;
+            max-width: 120px;
             height: auto;
             border-radius: 50%;
         }
-        .container {
+        main {
             width: 100%;
             max-width: 420px;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
             box-sizing: border-box;
         }
         h1 {
-            font-size: 26px;
-            margin-bottom: 25px;
-            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #000000;
         }
-        .btn-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background-color: #0077b6;
-            color: #ffffff;
-            padding: 14px 20px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            text-decoration: none;
+        .maps-title {
+            font-size: 24px;
             font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #000000;
         }
-        .btn-link:hover {
-            background-color: #0096c7;
-            transform: translateY(-2px);
-        }
-        .btn-disabled {
-            background-color: #e0e0e0;
-            color: #888;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .btn-disabled:hover {
-            transform: none;
-        }
-        .btn-link i {
-            font-size: 20px;
-        }
-        .maps-section {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        .maps-section h2 {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 15px;
-        }
-        .maps-section a img {
+        .maps-img {
             max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+            border-radius: 12px;
             transition: transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .maps-section a img:hover {
+        .maps-img:hover {
             transform: scale(1.02);
         }
     </style>
@@ -98,34 +84,30 @@
 <body>
 
 <header>
-    <img src="antojitos Juanita logo.png" alt="Logo Antojitos Juanita" class="logo-img">
+    <nav>
+        <a href="pct.html">
+            <i class="fas fa-credit-card"></i> Pago
+        </a>
+        <a href="https://wa.me/5534338228" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#" onclick="return false;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+    </nav>
+    <div>
+        <img src="antojitos_juanita_logo.png" alt="Logo Antojitos Juanita" class="logo-img">
+    </div>
 </header>
 
-<div class="container">
+<main>
     <h1>Antojitos Juanita</h1>
 
-    <a href="pct.html" class="btn-link">
-        <i class="fas fa-credit-card"></i>
-        <span>Pago con Transferencia</span>
+    <div class="maps-title">Califícanos en Google Maps</div>
+    <a href="https://search.google.com/local/writereview?placeid=ChIJrSYqFLr10YURWmrVFpbnzSk" target="_blank" rel="noopener noreferrer">
+        <img src="Antojitos Juanita logo.png" alt="Califícanos en Google Maps" class="maps-img">
     </a>
-
-    <a href="https://wa.me/5534338228" class="btn-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp</span>
-    </a>
-
-    <a href="#" class="btn-link btn-disabled" onclick="return false;">
-        <i class="fab fa-facebook"></i>
-        <span>Facebook (Pendiente)</span>
-    </a>
-
-    <div class="maps-section">
-        <h2>Califícanos en Google Maps</h2>
-        <a href="https://search.google.com/local/writereview?placeid=ChIJrSYqFLr10YURWmrVFpbnzSk" target="_blank" rel="noopener noreferrer">
-            <img src="AJ_LOGO.jpg" alt=" Califícanos en Google Maps">
-        </a>
-    </div>
-</div>
+</main>
 
 </body>
 </html>
