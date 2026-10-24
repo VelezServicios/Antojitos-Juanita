@@ -46,4 +46,99 @@
         }
         .btn-link {
             display: flex;
-            align-items
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #0077b6;
+            color: #ffffff;
+            padding: 14px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .btn-link:hover {
+            background-color: #87ceeb;
+            color: #0a1f44;
+            transform: translateY(-2px);
+        }
+        .btn-disabled {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .btn-disabled:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ccc;
+            transform: none;
+        }
+        .btn-link i {
+            font-size: 20px;
+        }
+        .maps-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .maps-section h2 {
+            font-size: 18px;
+            color: #87ceeb;
+            margin-bottom: 15px;
+        }
+        .maps-section a img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .maps-section a img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Contenedor del Logo -->
+        <div class="header-logo">
+            <img src="watermarked_img_5542235501330617369.jpg" alt="Antojitos Juanita Logo">
+        </div>
+
+        <h1>Antojitos Juanita</h1>
+
+        <!-- Enlace Pago con Transferencia -->
+        <a href="pct.html" class="btn-link">
+            <i class="fas fa-credit-card"></i>
+            <span>Pago con Transferencia</span>
+        </a>
+
+        <!-- Enlace WhatsApp -->
+        <a href="https://wa.me/5534338228" class="btn-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <!-- Enlace Facebook (Pendiente) -->
+        <a href="#" class="btn-link btn-disabled" onclick="return false;">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook (Pendiente)</span>
+        </a>
+
+        <!-- Sección Google Maps como botón/imagen inferior -->
+        <div class="maps-section">
+            <h2>Califícanos en Google Maps</h2>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJrSYqFLr10YURWmrVFpbnzSk" target="_blank" rel="noopener noreferrer">
+                <img src="AJ_LOGO.jpg" alt="Califícanos en Google Maps - AJ LOGO">
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
