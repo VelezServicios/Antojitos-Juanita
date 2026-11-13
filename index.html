@@ -17,6 +17,73 @@
             flex-direction: column;
             align-items: center;
         }
+        #welcome-ad-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        .ad-modal {
+            position: relative;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid #e0e0e0;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .ad-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #333333;
+            font-size: 28px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .ad-close-btn:hover {
+            color: #0077b6;
+        }
+        .ad-timer {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 14px;
+            color: #666666;
+            font-weight: bold;
+        }
+        .ad-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        .ad-image-link {
+            display: block;
+        }
+        .ad-banner-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .ad-banner-img:hover {
+            transform: scale(1.02);
+        }
         header {
             width: 100%;
             background-color: #f0f0f0;
@@ -118,6 +185,19 @@
 </head>
 <body>
 
+<div id="welcome-ad-overlay">
+    <div class="ad-modal">
+        <div class="ad-timer" id="ad-timer-text">Cierra en 5s</div>
+        <button class="ad-close-btn" onclick="closeAd()">&times;</button>
+        
+        <div class="ad-text">¿Necesitas una página web para tu negocio? Nosotros te ayudamos. Contáctanos y recibe un gran descuento.</div>
+        
+        <a href="#" class="ad-image-link" target="_blank">
+            <img src="VELEZ_AD.jpg" alt="Anuncio Promocional" class="ad-banner-img">
+        </a>
+    </div>
+</div>
+
 <header>
     <div>
         <a href="#">
@@ -147,6 +227,30 @@
     </div>
     <div class="maps-subtitle">Haz clic en la imagen</div>
 </main>
+
+<script>
+    let timeLeft = 5;
+    const timerText = document.getElementById('ad-timer-text');
+    const adOverlay = document.getElementById('welcome-ad-overlay');
+
+    function closeAd() {
+        adOverlay.style.opacity = '0';
+        setTimeout(() => {
+            adOverlay.style.display = 'none';
+        }, 500);
+    }
+
+    const countdown = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+            timerText.innerText = `Cierra en ${timeLeft}s`;
+        } else {
+            timerText.innerText = '';
+            clearInterval(countdown);
+            closeAd();
+        }
+    }, 1000);
+</script>
 
 </body>
 </html>
